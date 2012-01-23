@@ -25,10 +25,24 @@ h1. What do we use?
   
 h2. <a href="https://www.google.com/analytics/" target="_blank"> <img src="http://upload.wikimedia.org/wikipedia/commons/5/5c/Google_Analytics_logo.png" > </a>
 
+* Pageviews
+* User segmentation
+* Time on site
+* Bounce rate
+* Browser capabilities
+* Anonymous event tracking
+
 h2. <a href="http://kissmetrics.com" target="_blank"> <img src="https://www.kissmetrics.com/images/external/km_logo.png"> </a>
+
+* Funnel conversions
+* Cohort analysis
+* Names user event tracking
+* User timeline
 
 h2. <a href="https://github.com/jkrall/analytical" target="_blank"> Analytical Gem </a>
 
+* Turns our analytics on or off depending on whether you're an admin or no
+* Manages analytics in development / testing / staging / production environments
 
 </div><div class="slide">
 
