@@ -7,23 +7,23 @@ slide: true
 
 <div class="slide">
 
-h1. What is Programming?
+h1. What are analytics?
   
-* A program is a way of making a computer do something.
-* A programmer is a person who makes these things. But also makes it obvious how it works to someone else.
+h2. We need information to make product decisions. We get this information from a variety of sources
 
-* To do that the programmer has to instruct the computer how to do something.
-* Just like a recipe for making a meal.
+* We get qualitative information about product decisions from designers and domain experts, advisors, and usability testers.
+* Analytics are tools to gather quantitative data about how users interact with a website
 
 </div><div class="slide">
 
-h1. Why do we start programming?
+h1. What do we use?
   
-* It's fun.
-* All the cool kids are doing it.
+* Google Analytics
+* Kissmetrics
+* Analytical Gem
 
-!/what_is_programming/assets/images/nope.jpg!
-
+!https://ssl.gstatic.com/analytics/20120110/web/analytics_logo.png!
+!https://www.kissmetrics.com/images/external/km_logo.png!
 
 
 </div><div class="slide">
