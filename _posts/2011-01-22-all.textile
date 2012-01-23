@@ -32,12 +32,20 @@ h2. <a href="https://www.google.com/analytics/" target="_blank"> <img src="http:
 * Browser capabilities
 * Anonymous event tracking
 
+</div><div class="slide">
+
+h1. What do we use?
+
 h2. <a href="http://kissmetrics.com" target="_blank"> <img src="https://www.kissmetrics.com/images/external/km_logo.png"> </a>
 
 * Funnel conversions
 * Cohort analysis
 * Names user event tracking
 * User timeline
+
+</div><div class="slide">
+
+h1. What do we use?
 
 h2. <a href="https://github.com/jkrall/analytical" target="_blank"> Analytical Gem </a>
 
