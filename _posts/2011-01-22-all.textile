@@ -11,16 +11,19 @@ h1. What are analytics?
   
 h2. We need information to make product decisions. We get this information from a variety of sources
 
-* We get qualitative information about product decisions from designers and domain experts, advisors, and usability testers.
+* We get qualitative information about product decisions from
+** Designers and domain experts
+** Advisors
+** Usability testers
 * Analytics are tools to gather quantitative data about how users interact with a website
 
 </div><div class="slide">
 
 h1. What do we use?
   
-* <a href="https://www.google.com/analytics/" target="_blank"> <img src="http://upload.wikimedia.org/wikipedia/commons/5/5c/Google_Analytics_logo.png" > </a>
-* <a href="http://kissmetrics.com" target="_blank"> <img src="https://www.kissmetrics.com/images/external/km_logo.png"> </a>
-* <a href="https://github.com/jkrall/analytical" target="_blank"> Analytical Gem </a>
+h2. <a href="https://www.google.com/analytics/" target="_blank"> <img src="http://upload.wikimedia.org/wikipedia/commons/5/5c/Google_Analytics_logo.png" > </a>
+h2. <a href="http://kissmetrics.com" target="_blank"> <img src="https://www.kissmetrics.com/images/external/km_logo.png"> </a>
+h2. <a href="https://github.com/jkrall/analytical" target="_blank"> Analytical Gem </a>
 
 
 </div><div class="slide">
