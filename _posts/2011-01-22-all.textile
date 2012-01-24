@@ -148,7 +148,7 @@ h2. This gif requests includes variables which encode things like:
 
 Part of a sample gif request:
 
-<img src="http://cl.ly/Da5v/Screen%20Shot%202012-01-23%20at%2010.10.50%20PM.png">
+<img src="http://http://f.cl.ly/items/301f0q2O343O2B012N45/Screen%20Shot%202012-01-23%20at%2010.10.50%20PM.png">
 
 </div><div class="slide">    
 
