@@ -179,8 +179,6 @@ h4(code_heading).  client.coffee
 
 h1. Track Page View 
 
-<br>
-
 {% highlight coffeescript %}
   
   _trackPageview("customURL")
@@ -323,7 +321,7 @@ h1. Examples
 
 </div><div class="slide">
 
-h1. The Future of Tracking
+h1. The next steps for Art.sy
 
 * Better event tracking
 * Track scrolling
