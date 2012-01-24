@@ -150,7 +150,7 @@ h4(code_heading).  client.coffee
     $('#zoom_light_box, .ui-dialog, .ui-widget-overlay').css('display', 'none')
     $('#feedback').dialog('close')
     
-    _gaq.push(["_trackPageview", window.location.pathname + window.location.hash]) if _gaq?
+    _gaq.push(["_trackPageview", window.location.pathname + window.location.hash])
 
 {% endhighlight %}
 
@@ -164,7 +164,7 @@ h4(code_heading). trackPageview
 
 {% highlight coffeescript %}
   
-   _gaq.push(["_trackPageview", window.location.pathname + window.location.hash]) if _gaq?
+   _gaq.push(["_trackPageview", window.location.pathname + window.location.hash])
 
 {% endhighlight %}
 
@@ -189,33 +189,43 @@ h1. Custom Variables
 {% highlight javascript %}
 
   _setCustomVar(index, name, value, scope)
-  _setCustomVar(1, "User Type", "Member", 2)
 
 {% endhighlight %}
 
-h2. This sets up an array of Custom Variables with:
+<br>
+
+{% highlight javascript %}
+
+  _gaq.push(["_setCustomVar", 1, "User Type", "Member", 1])
+
+{% endhighlight %}
+
+h2. This sends our custom variables with the next trackPageview event
 
 * Index is allows you to sort custom variables
-* Name identifies the type of thing you're tracking
-* Value is the value associated with the type you're tracking
-* Scope is determines whether this is visitor-level, session-level, or page-level
+* Name identifies the type of thing you're tracking ("User Type")
+* Value is the value associated with the type you're tracking ("Member")
+* Scope determines whether this is user-level, session-level, or page-level ("1" i.e. user-level)
 
 </div><div class="slide">
 
-h1. but but but, I want it to do something!
+h1. Event tracking
 
 * On how we can do an input and an output
 
-h4(code_heading).  Ruby 
+h4(code_heading). trackEvent  
 
-{% highlight ruby %}
+{% highlight javascript %} 
+
+_trackEvent(category, action, opt_label, opt_value, opt_noninteraction)
+
+{% endhighlight %}
+
+<br>
+
+{% highlight javascript %}
   
-  puts "What would you want to eat?"
-  something_nice = gets
-
-  puts "I love"
-  puts something_nice
-  puts "too."
+  _gaq.push(['_trackEvent', App.router.trackedRoute(), 'Artwork clicked', 'Carousel'])
 
 {% endhighlight %}
 
