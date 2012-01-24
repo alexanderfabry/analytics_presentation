@@ -108,7 +108,7 @@ h2. There are a few main types of things we track with Google
 
 </div><div class="slide">
 
-h1. Page Views
+h1. Setting it up
 
 h4(code_heading).  ga.js
 
@@ -132,23 +132,24 @@ var _gaq = _gaq || [];
 
 h1. _gaq.push
 
-* You'll see _gaq.push and _kmq.push all over our tracking
-* _gaq is an array into which tracking commands are pushed
-* The ga.js script is fetched from Google servers
+* You'll see <b>_gaq.push</b> and <b>_kmq.push<b> all over our tracking
+* <b>_gaq</b> is an array into which tracking commands are pushed
+* The ga.js script is fetched from Google servers (this happens in that block of javascript from Analytical)
 * This script looks for elements in _gaq and executes the associated tracking command
 
 </div><div class="slide">
 
-h1. _gaq.push
+h1. What's a tracking command?
 
-h2. ga.js then send a requests for a single-pixel gif to Google's servers
+h2. ga.js takes the tracking command and sends a requests for a single-pixel gif to Google's servers
 
-h2. This gif requests includes variables which encode things like:
+h2. The url of this gif request includes parameters which encode things like:
 
 * Cookies that have been set by Google 
 * Browser and OS settings
 * Type of requests and associated data
-* Transactional information...
+* Transactional information
+* A whole lot of other things
 
 </div><div class="slide">    
 
