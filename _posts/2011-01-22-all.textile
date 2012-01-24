@@ -7,17 +7,19 @@ slide: true
 
 <div class="slide">
 
-h1. What are analytics?
+h1. Analytics?
   
 h2. We need information to make product decisions. We get this information from a variety of sources
 
 h2. We get qualitative information about product decisions from
 
-* Designers and domain experts
+* Designers, product, and domain experts
 * Advisors
 * Usability testers
 
-h2. Analytics are tools to gather quantitative data about how users interact with a website
+<br>
+
+h2. Analytics are tools to gather <b> quantitative </b> data about how users interact with a website
 
 </div><div class="slide">
 
@@ -40,7 +42,7 @@ h2. <a href="http://kissmetrics.com" target="_blank"> <img src="https://www.kiss
 
 * Funnel conversions
 * Cohort analysis
-* Names user event tracking
+* Named user event tracking
 * User timeline
 
 </div><div class="slide">
@@ -55,11 +57,36 @@ h2. <a href="https://github.com/jkrall/analytical" target="_blank"> Analytical G
 </div><div class="slide">
 
 
-h1. Aren't there better ways?
+h1. How does this work?
 
-* As time progresses we get further away from what the computer wants.
-* Programmers look for expressiveness in code.
-* Beautiful code is readable code.
+h4(code_heading).  main.html.haml 
+
+{% highlight haml %}
+  
+  !!!
+  - ie_tag(:html) do
+    %head    
+
+      = raw analytical.head_prepend_javascript
+      
+      = render partial: 'layouts/common_head'
+
+      = include_stylesheets :common, :client
+
+      - analytical.identify current_user.id, :email => current_user.email
+      = raw analytical.now.custom_variable(1, 'User Type', 'Member', 2)
+      = raw analytical.head_append_javascript
+
+    %body
+      = raw analytical.body_prepend_javascript
+      
+      -#Header
+      -#Frames
+      -#Footer
+      
+      = raw analytical.body_append_javascript
+
+{% endhighlight %}
 
 </div><div class="slide">
 
