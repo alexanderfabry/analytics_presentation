@@ -132,7 +132,7 @@ var _gaq = _gaq || [];
 
 h1. _gaq.push
 
-* You'll see <b>_gaq.push</b> and <b>_kmq.push<b> all over our tracking
+* You'll see <b>_gaq.push</b> and <b>_kmq.push</b> all over our tracking
 * <b>_gaq</b> is an array into which tracking commands are pushed
 * The ga.js script is fetched from Google servers (this happens in that block of javascript from Analytical)
 * This script looks for elements in _gaq and executes the associated tracking command
