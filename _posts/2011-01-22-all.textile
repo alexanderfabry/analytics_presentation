@@ -137,9 +137,9 @@ h1. _gaq.push
 
 h1. _gaq.push
 
-h2. ga.js then send a requests for a single pixel gif to google's servers
+h2. ga.js then send a requests for a single-pixel gif to Google's servers
 
-h2.  This gif requests includes variables which encode things like:
+h2. This gif requests includes variables which encode things like:
 
 * Cookies that have been set by Google 
 * Browser and OS settings
@@ -148,7 +148,7 @@ h2.  This gif requests includes variables which encode things like:
 
 Part of a sample gif request:
 
-<img src="http://cl.ly/Da5v">
+<img src="http://cl.ly/Da5v/Screen%20Shot%202012-01-23%20at%2010.10.50%20PM.png">
 
 </div><div class="slide">    
 
