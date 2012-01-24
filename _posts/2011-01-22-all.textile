@@ -7,7 +7,7 @@ slide: true
 
 <div class="slide">
 
-h1. Analytics
+h1. The Measure of All Things
 
 </div><div class="slide">
 
@@ -78,7 +78,7 @@ h4(code_heading).  main.html.haml
       
       = render partial: 'layouts/common_head'
 
-      = include_stylesheets :common, :client
+      -#Stylesheets
 
       - analytical.identify current_user.id, :email => current_user.email
       = raw analytical.now.custom_variable(1, 'User Type', 'Member', 2)
@@ -334,6 +334,7 @@ h1. The next steps for Art.sy
 * A/B testing
 * Refactor to make analytics more maintainable
 * Better testing of analytics
+* Dashboard for overhead monitors at new office
 * Internal analytics -- inquiry requests, search logs, etc
 
 </div>
