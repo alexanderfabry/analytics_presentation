@@ -233,7 +233,7 @@ h1. Custom Variables
 
 h2. This sends our custom variables with the next trackPageview event
 
-* Index is allows you to sort custom variables
+* Index allows you to sort custom variables
 * Name identifies the type of thing you're tracking ("User Type")
 * Value is the value associated with the type you're tracking ("Member")
 * Scope determines whether this is user-level, session-level, or page-level ("1" i.e. user-level)
