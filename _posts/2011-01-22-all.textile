@@ -146,10 +146,6 @@ h2. This gif requests includes variables which encode things like:
 * Type of requests and associated data
 * Transactional information...
 
-Part of a sample gif request:
-
-!gagif.png!
-
 </div><div class="slide">    
 
 h1. Type of Request: Page View
