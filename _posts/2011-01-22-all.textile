@@ -164,6 +164,14 @@ h4(code_heading). trackPageview
 
 {% highlight coffeescript %}
   
+  _trackPageview("customURL")
+
+{% endhighlight %}
+
+<br>
+
+{% highlight coffeescript %}
+  
    _gaq.push(["_trackPageview", window.location.pathname + window.location.hash])
 
 {% endhighlight %}
@@ -200,6 +208,8 @@ h1. Custom Variables
 
 {% endhighlight %}
 
+<br>
+
 h2. This sends our custom variables with the next trackPageview event
 
 * Index is allows you to sort custom variables
@@ -211,7 +221,7 @@ h2. This sends our custom variables with the next trackPageview event
 
 h1. Event tracking
 
-* On how we can do an input and an output
+h2. Here is where we can go crazy
 
 h4(code_heading). trackEvent  
 
@@ -223,11 +233,22 @@ _trackEvent(category, action, opt_label, opt_value, opt_noninteraction)
 
 <br>
 
+h2. We use these parameters like this:
+
+* category = Where the action happened (i.e. which route)
+* action = What was UI object was interacted with
+* opt_label = Qualifier on that interaction
+
+<br>
+
 {% highlight javascript %}
   
   _gaq.push(['_trackEvent', App.router.trackedRoute(), 'Artwork clicked', 'Carousel'])
 
 {% endhighlight %}
+
+
+* This means that if you're on the homepage and you click the center artwork in the carousel, then an event is tracked with the parameters (Home, Artwork clicked, Carousel)
 
 </div><div class="slide">
 
