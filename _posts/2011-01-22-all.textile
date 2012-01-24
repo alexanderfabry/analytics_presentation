@@ -245,14 +245,6 @@ h2. We use these parameters like this:
 
 </div><div class="slide">
 
-h1. So what is happening here?
-
-* Why are there quotes around things
-* what puts, and gets are
-* What is a string?
-  
-</div><div class="slide">
-
 h1. Examples of tracked events
 
 bq.
