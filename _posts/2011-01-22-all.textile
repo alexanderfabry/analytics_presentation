@@ -138,6 +138,7 @@ h1. _gaq.push
 h1. _gaq.push
 
 h2. ga.js then send a requests for a single pixel gif to google's servers
+
 h2.  This gif requests includes variables which encode things like:
 
 * Cookies that have been set by Google 
@@ -146,6 +147,8 @@ h2.  This gif requests includes variables which encode things like:
 * Transactional information...
 
 Part of a sample gif request:
+
+{% highlight coffeescript %}
 
 http://www.google-analytics.com/__utm.gif?utmwv=4&utmn=769876
 874&utmhn=example.com&utmcs=ISO-8859-1&utmsr=1280x1024&utmsc=
@@ -156,6 +159,7 @@ paign+gatc012&utm_term=keywords+gatc012&utm_content=content+g
 atc012&utm_medium=medium+gatc012&utmac=UA-30138-1&utmcc=__utm
 a%3D97315849.1774621898.1207701397.1207701397.1207701397.1%...
 
+{% endhighlight %}
 
 </div><div class="slide">    
 
