@@ -42,7 +42,7 @@ h2. <a href="https://www.google.com/analytics/" target="_blank"> <img src="http:
 
 h1. What do we use?
 
-h2. <a href="http://kissmetrics.com" target="_blank"> <img src="https://www.kissmetrics.com/images/external/km_logo.png"> </a>
+h2. <a href="http://kissmetrics.com" target="_blank"> <img src="http://www.kissmetrics.com/images/external/km_logo.png"> </a>
 
 * Funnel conversions
 * Cohort analysis
