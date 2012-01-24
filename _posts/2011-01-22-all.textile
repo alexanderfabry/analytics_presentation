@@ -257,6 +257,16 @@ h2. We use these parameters like this:
 * action = What was UI object was interacted with
 * opt_label = Qualifier on that interaction
 
+</div><div class="slide">
+
+h1. Event tracking
+
+* You've heard about thick client. A lot of the interactions you see on Art.sy are <em> event based</em> and that means I can fire a tracking command on each one of these events.
+* If the event doesn't already exist, then I set it up
+
+h4(code_heading).  now_showing.coffee
+
+<br>
 
 {% highlight coffeescript %}
 
