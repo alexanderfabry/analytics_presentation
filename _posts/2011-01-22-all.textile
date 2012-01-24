@@ -233,10 +233,10 @@ h1. Custom Variables
 
 h2. This sends our custom variables with the next trackPageview event
 
-* Index allows you to sort custom variables
-* Name identifies the type of thing you're tracking ("User Type")
-* Value is the value associated with the type you're tracking ("Member")
-* Scope determines whether this is user-level, session-level, or page-level ("1" i.e. user-level)
+* <em>Index </em>allows you to sort custom variables
+* <em>Name </em>identifies the type of thing you're tracking ("User Type")
+* <em>Value </em>is the value associated with the type you're tracking ("Member")
+* <em>Scope </em>determines whether this is user-level, session-level, or page-level ("1" i.e. user-level)
 
 </div><div class="slide">
 
@@ -253,9 +253,9 @@ _trackEvent(category, action, opt_label, opt_value, opt_noninteraction)
 
 h2. We use these parameters like this:
 
-* category = Where the action happened (i.e. which route)
-* action = What was UI object was interacted with
-* opt_label = Qualifier on that interaction
+* <em> category</em> = Where the action happened (i.e. which route)
+* <em> action</em> = What was UI object was interacted with
+* <em> opt_label</em> = Qualifier on that interaction
 
 </div><div class="slide">
 
@@ -263,6 +263,8 @@ h1. Event tracking
 
 * You've heard about thick client. A lot of the interactions you see on Art.sy are <em> event based</em> and that means I can fire a tracking command on each one of these events.
 * If the event doesn't already exist, then I set it up
+
+<br>
 
 h4(code_heading).  now_showing.coffee
 
@@ -284,7 +286,7 @@ h2. This means that if you're on the homepage and you click the center artwork i
 h1. Examples of tracked events
 
 bq.         
-  <b>Action, Label</b>
+  <em>Action, Label</em>
   Follow, Added
   Follow, Removed
   Save, Added
@@ -307,7 +309,7 @@ bq.
 h1. Many can happen from any route
 
 bq.         
-  <b>Routes:</b>
+  <em>Routes:</em>
   'home'
   'tour'
   'tastetest'
