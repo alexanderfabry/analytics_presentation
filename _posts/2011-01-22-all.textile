@@ -109,6 +109,8 @@ h1. Page Views
 
 h4(code_heading).  ga.js
 
+<br>
+
 {% highlight javascript %}
   
 var _gaq = _gaq || [];
@@ -129,6 +131,8 @@ h1. Page Views
 
 h4(code_heading).  client.coffee
 
+<br>
+
 {% highlight coffeescript %}
   
   class App.Routers.Client extends App.Router
@@ -145,6 +149,7 @@ h4(code_heading).  client.coffee
   any: ->
     $('#zoom_light_box, .ui-dialog, .ui-widget-overlay').css('display', 'none')
     $('#feedback').dialog('close')
+    
     _gaq.push(["_trackPageview", window.location.pathname + window.location.hash]) if _gaq?
 
 {% endhighlight %}
@@ -155,12 +160,17 @@ h1. Track Page View
 
 h4(code_heading). trackPageview
 
+<br>
+
 {% highlight coffeescript %}
   
    _gaq.push(["_trackPageview", window.location.pathname + window.location.hash]) if _gaq?
 
 {% endhighlight %}
 
+<br>
+
+h2. So what happens here?
 h2. Let's say we're looking at the Home Carousel and search for "Photography"
 
 * window.location.pathname will return "/"
@@ -173,10 +183,22 @@ h2. Google then tracks that there was a page view at the location "/#!/gene/phot
 </div><div class="slide">
 
 
-h1. So what is happening here?
+h1. Custom Variables
 
-* In the first example
-* In the second
+
+{% highlight javascript %}
+
+  _setCustomVar(index, name, value, scope)
+  _setCustomVar(1, "User Type", "Member", 2)
+
+{% endhighlight %}
+
+h2. This sets up an array of Custom Variables with:
+
+* Index is allows you to sort custom variables
+* Name identifies the type of thing you're tracking
+* Value is the value associated with the type you're tracking
+* Scope is determines whether this is visitor-level, session-level, or page-level
 
 </div><div class="slide">
 
