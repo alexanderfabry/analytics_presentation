@@ -221,7 +221,6 @@ h1. Event tracking
 h2. Here is where we can go crazy
 
 {% highlight javascript %} 
-
 _trackEvent(category, action, opt_label, opt_value, opt_noninteraction)
 
 {% endhighlight %}
