@@ -158,8 +158,6 @@ h4(code_heading).  client.coffee
 
 h1. Track Page View 
 
-h4(code_heading). trackPageview
-
 <br>
 
 {% highlight coffeescript %}
@@ -178,8 +176,7 @@ h4(code_heading). trackPageview
 
 <br>
 
-h2. So what happens here?
-h2. Let's say we're looking at the Home Carousel and search for "Photography"
+h2. So what happens here? Let's say we're looking at the Home Carousel and search for "Photography"
 
 * window.location.pathname will return "/"
 * window.location.hash will return "#!/gene/photography"
@@ -223,8 +220,6 @@ h1. Event tracking
 
 h2. Here is where we can go crazy
 
-h4(code_heading). trackEvent  
-
 {% highlight javascript %} 
 
 _trackEvent(category, action, opt_label, opt_value, opt_noninteraction)
@@ -239,7 +234,6 @@ h2. We use these parameters like this:
 * action = What was UI object was interacted with
 * opt_label = Qualifier on that interaction
 
-<br>
 
 {% highlight javascript %}
   
@@ -260,18 +254,45 @@ h1. So what is happening here?
   
 </div><div class="slide">
 
-h1. Cooking metaphors
+h1. Examples of tracked events
 
-bq. 
-  Recipe -> Code
-  Ingredients -> Classes
-  Ingredient sliced/diced -> Instance
-  Tools -> Text Editor
-  You -> Compiler
+bq.
+  <b>Action, Label</b>
+  Follow, Added
+  Follow, Removed
+  Save, Added
+  Save, Removed
+  Purchase Info, Hover
+  Purchase Info, Send
+  View In Room
+  Artist, Clicked
+  Artwork, Clicked
+  Gene, Clicked
+  Browse, From Header
+  Home, From Header
+  Collections, From Header
+  Browse, See More
+  Carousel, Viewed
+  Carousel, Scrolled
 
 </div><div class="slide">
 
-h1. page intentionally blank
+h1. Many  of these can happen from any route
+
+bq.
+  Routes:
+  'home'
+  'tour'
+  'tastetest'
+  'forYou'
+  'userEdit'
+  'invite'
+  'page'
+  'exhibition'
+  'tag'
+  'gene'
+  'artist'
+  'artwork'
 
 </div><div class="slide">
 
