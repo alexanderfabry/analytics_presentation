@@ -7,7 +7,7 @@ slide: true
 
 <div class="slide">
 
-h1. Analytics?
+h1. Analytics
   
 h2. We need information to make product decisions. We get this information from a variety of sources
 
@@ -104,7 +104,6 @@ h2. There are a few main types of things we track with Google
 
 </div><div class="slide">
 
-
 h1. Page Views
 
 h4(code_heading).  ga.js
@@ -127,7 +126,34 @@ var _gaq = _gaq || [];
 
 </div><div class="slide">
 
-h1. Page Views
+h1. _gaq.push
+
+* You'll see _gaq.push and _kmq.push all over our tracking
+* _gaq is an array into which tracking commands are pushed
+* The ga.js script is fetched from Google servers
+* This script looks for elements in _gaq and executes the associated tracking command
+
+</div><div class="slide">
+
+h1. _gaq.push
+
+h2. ga.js then send a requests for a single pixel gif to google's servers
+h2.  This gif requests includes variables which encode things like:
+
+* Cookies that have been set by Google 
+* Browser and OS settings
+* Type of requests and associated data
+* Transactional information...
+
+{% highlight html %}
+
+http://www.google-analytics.com/__utm.gif?utmwv=4&utmn=769876874&utmhn=example.com&utmcs=ISO-8859-1&utmsr=1280x1024&utmsc=32-bit&utmul=en-us&utmje=1&utmfl=9.0%20%20r115&utmcn=1&utmdt=GATC012%20setting%20variables&utmhid=2059107202&utmr=0&utmp=/auto/GATC012.html?utm_source=www.gatc012.org&utm_campaign=campaign+gatc012&utm_term=keywords+gatc012&utm_content=content+gatc012&utm_medium=medium+gatc012&utmac=UA-30138-1&utmcc=__utma%3D97315849.1774621898.1207701397.1207701397.1207701397.1%3B... 
+
+{% endhighlight %}
+
+</div><div class="slide">    
+
+h1. Type of Request: Page View
 
 h4(code_heading).  client.coffee
 
@@ -240,6 +266,7 @@ h2. We use these parameters like this:
 
 {% endhighlight %}
 
+<br>
 
 h2. This means that if you're on the homepage and you click the center artwork in the carousel, then an event is tracked with the parameters (Home, Artwork clicked, Carousel)
 
@@ -268,10 +295,10 @@ bq.
 
 </div><div class="slide">
 
-h1. Many  of these can happen from any route
+h1. Many can happen from any route
 
 bq.         
-  Routes:
+  <b>Routes:</b>
   'home'
   'tour'
   'tastetest'
@@ -288,140 +315,27 @@ bq.
 </div><div class="slide">
 
 
-h1. What is a variable
+h1. You can analyze each of these parameters separately
   
-h4(code_heading).  Javascript 
-
-{% highlight js %}
-  
-  var cheese = "brie"
-  cheese
-  cheese = "cheddar"
-  cheese
-  cheese = "wensleydale"
-{% endhighlight %}
+* For instance, what do users do when they get to the homepage?
+* Where do users open the browse menu most often from?
+* Where do users search from?
+* Where do users follow from?
 
 </div><div class="slide">
 
-h1. Why are they variables useful?
-  
-* The official answer, to retain state.
-* A better answer, so the computer can remember things, not us
-* Lets make a cooking example, keeping track of how many apples we have
-
-h4(code_heading).  Javascript 
-
-{% highlight js %}
-  
-  var number_of_apples = 5
-  "Oh look more apples!"
-  number_of_apples = number_of_apples + 10;
-  "Oh... orta ate a lot"
-  number_of_apples = number_of_apples - 20;
-  "wait, how do we have minus apples?"
-{% endhighlight %}
-
-or we could ask as the program is running  
-
-h4(code_heading).  Ruby 
-
-{% highlight ruby %}
-  
-  number_of_pies = 200
-  puts "you have " + number_of_pies.to_s + " pies"
-  puts "how many were lunched?"
-  number_of_pies =  number_of_pies - gets.to_i
-  puts "you now have " + number_of_pies.to_s + " pies"
-{% endhighlight %}
+h1. Examples
 
 </div><div class="slide">
 
-h1. Methods how do they work?
-  
-* Methods are ways to name bits of code
-* We've been using a few methods
-* puts, gets, print, goto, to_s, to_i
+h1. Future
 
-h2. We can use and make our own methods.
-
-</div><div class="slide">
-
-h1. page intentionally blank
-
-</div><div class="slide">
-
-
-h1. Objects 
-  
-* The world is full of objects
-* Therefore it makes sense to simulate objects
-
-* I'm a person, I am of the same type as you, but I'm not you.
-
-* A Person is a class, I am an instance of a class.
-* An object has methods, and variables. As best to model them.
-
-h4(code_heading).  Javascript 
-
-{% highlight js %}
-  
-  var orta = { name: "orta", hair:"brown" }
-  orta.do_dishes = function(){
-    console.log("dishing up")
-  }
-  orta.do_dishes();
-  orta
-{% endhighlight %}
-
-</div><div class="slide">
-
-
-h1. Objects are representational
-
-h1. ( though some can be abstract )
-
-The simple idea is that an object can represent something.
-To use the Artsy website as an example
-
-bq.         
-  Class -> Artist
-  Instance -> Jackson Pollock
-
-  Or 
-
-bq.         
-  Class -> Artwork
-  Instance -> Number 1
-
-</div><div class="slide">
-
-h1. This allows us to share code between objects, because sharing is caring.
-
-h4(code_heading).  Ruby 
-
-{% highlight ruby %}
-
-  class Human
-    def dance
-      puts "dances!"
-    end
-  end
-
-  class Nerd < Human
-    def put_on_glasses
-      puts "check these specs out"
-    end
-  end
-
-  orta = Nerd.new
-  orta.put_on_glasses()
-  orta.dance()
-{% endhighlight %}
-
-
-</div><div class="slide">
-
-
-<iframe width="853" height="480" src="http://www.youtube.com/embed/2fVvfEPWk8M" frameborder="0" allowfullscreen></iframe>
+* Better event tracking
+* Track scrolling
+* Better user segmentation / custom variables
+* A/B testing
+* Refactor to make analytics more maintainable
+* Better testing of analytics
+* Internal analytics -- inquiry requests, search logs, etc
 
 </div>
