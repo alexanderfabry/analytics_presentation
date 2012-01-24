@@ -61,10 +61,13 @@ h1. How does this work?
 
 h4(code_heading).  main.html.haml 
 
+<br> 
+
 {% highlight haml %}
   
   !!!
   - ie_tag(:html) do
+  
     %head    
 
       = raw analytical.head_prepend_javascript
@@ -78,6 +81,7 @@ h4(code_heading).  main.html.haml
       = raw analytical.head_append_javascript
 
     %body
+    
       = raw analytical.body_prepend_javascript
       
       -#Header
@@ -90,47 +94,81 @@ h4(code_heading).  main.html.haml
 
 </div><div class="slide">
 
+h1. How about Google Analytics?
 
-h1. Terminology
+h2. There are a few main types of things we track with Google
 
-* Computer Program / App -> Things that run.
-* Programming Language -> Things that can be ran.
-* Compiler -> Things that turn code into apps.
-
-</div><div class="slide">
-
-
-h1. So what is the most basic paradigm?
-* You have a computer language
-
-* You give another program a file, or write in the code yourself. And the program just goes down line by line. We'll make a lot of these.
+* Page Views
+* Custom Variables: User vs Member
+* Events
 
 </div><div class="slide">
 
-h1. Show me the code
 
+h1. Page Views
 
-h4(code_heading).  BASIC
+h4(code_heading).  ga.js
 
-{% highlight ruby %}
+{% highlight javascript %}
   
-  10 PRINT "YEAH!"
-  20 GOTO 10
-  RUN
+var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', '#{options[:key]}']);
+  _gaq.push(['_setDomainName', '#{options[:domain]}']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
 
 {% endhighlight %}
 
-These are some simple examples
+</div><div class="slide">
 
-h4(code_heading).  Ruby 
+h1. Page Views
 
-{% highlight ruby %}
+h4(code_heading).  client.coffee
+
+{% highlight coffeescript %}
   
-  puts "Hello World"
+  class App.Routers.Client extends App.Router
+  
+  routes:
+    ''                     : 'home'
+    'gene/:id'             : 'gene'
+    
+  initialize: ->
+    @viewState = new App.Models.ViewState
+      home      : { obj: App.Views.HomeIndex }
+      gene      : { obj: App.Views.GeneFrame }
+        
+  any: ->
+    $('#zoom_light_box, .ui-dialog, .ui-widget-overlay').css('display', 'none')
+    $('#feedback').dialog('close')
+    _gaq.push(["_trackPageview", window.location.pathname + window.location.hash]) if _gaq?
 
 {% endhighlight %}
 
-Lets jump in and see what they do.
+</div><div class="slide">
+
+h1. Track Page View 
+
+h4(code_heading). trackPageview
+
+{% highlight coffeescript %}
+  
+   _gaq.push(["_trackPageview", window.location.pathname + window.location.hash]) if _gaq?
+
+{% endhighlight %}
+
+h2. Let's say we're looking at the Home Carousel and search for "Photography"
+
+* window.location.pathname will return "/"
+* window.location.hash will return "#!/gene/photography"
+
+<br>
+
+h2. Google then tracks that there was a page view at the location "/#!/gene/photography"
 
 </div><div class="slide">
 
