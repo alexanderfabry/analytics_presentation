@@ -241,13 +241,13 @@ h2. We use these parameters like this:
 {% endhighlight %}
 
 
-* This means that if you're on the homepage and you click the center artwork in the carousel, then an event is tracked with the parameters (Home, Artwork clicked, Carousel)
+h2. This means that if you're on the homepage and you click the center artwork in the carousel, then an event is tracked with the parameters (Home, Artwork clicked, Carousel)
 
 </div><div class="slide">
 
 h1. Examples of tracked events
 
-bq.
+bq.         
   <b>Action, Label</b>
   Follow, Added
   Follow, Removed
@@ -270,7 +270,7 @@ bq.
 
 h1. Many  of these can happen from any route
 
-bq.
+bq.         
   Routes:
   'home'
   'tour'
